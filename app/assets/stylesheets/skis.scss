@@ -1,0 +1,24 @@
+// Place all the styles related to the skis controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.first-container{
+  background-image: url("top1");  
+  height:70vh;  
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.about{
+  display:flex;
+}
+.pic{
+  height:400px;
+  width:300px;
+  margin-left: 220px;
+}
+.explain{
+  margin-left: 150px;
+}

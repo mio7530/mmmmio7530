@@ -1,0 +1,29 @@
+<h1>スキー場紹介</h1>
+<h3>一覧</h3>
+<%= form_tag({controller:"skis",action:"index"}, method: :get) do %>
+  <% Tag.all.each do |t| %>
+      <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
+  <% end %>
+  <%= submit_tag '検索' %>
+<% end %>
+<%= form_tag({controller:"skis",action:"index"}, method: :get) do %>
+  <%= text_field_tag :tag %>
+  <%= submit_tag 'タグを追加' %>
+<% end %>
+<div class="skis-container">
+  <% @skis.each do |t| %>
+    <div class="ski">
+    <%= link_to "詳細へ", ski_path(t.id) %>  
+     <%= t.user.email %>
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= t.comment %>
+      <h2>総合評価：
+   <span class="star-rating">
+     <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+     <span class="star-rating-back">★★★★★</span>
+   </span> 
+</h2>
+    </div>
+  <% end %>
+</div>
+
