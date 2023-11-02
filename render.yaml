@@ -1,0 +1,21 @@
+databases:
+  - name: hokkaidolove_DB
+    databaseName: hokkaidolove_db
+    user: hokkaidolove
+    region: singapore
+
+services:
+  - type: web
+    name: hokkaidolove
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hokkaidolove_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
