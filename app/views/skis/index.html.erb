@@ -1,3 +1,7 @@
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %> 
+
+
+
 <h1>スキー場紹介</h1>
 <h3>一覧</h3>
 <%= form_tag({controller:"skis",action:"index"}, method: :get) do %>
