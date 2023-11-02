@@ -1,8 +1,8 @@
 class SkisController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user! only: [:new, :create]
       def top
       end
-      
+
       def index
         if params[:tag]
           Tag.create(name: params[:tag])
