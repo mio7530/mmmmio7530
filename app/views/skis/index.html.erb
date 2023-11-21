@@ -1,13 +1,22 @@
+<body class="aiueo">
 <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %> 
-
-
-
-<h1>スキー場紹介</h1>
-<h3>一覧</h3>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="shiro">
+<h1>投稿一覧</h1>
+</div>
+<br>
+<br>
 <%= form_tag({controller:"skis",action:"index"}, method: :get) do %>
+  <div class="eee">
   <% Tag.all.each do |t| %>
       <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
   <% end %>
+  </div>
   <%= submit_tag '検索' %>
 <% end %>
 <%= form_tag({controller:"skis",action:"index"}, method: :get) do %>
@@ -17,17 +26,26 @@
 <div class="skis-container">
   <% @skis.each do |t| %>
     <div class="ski">
-    <%= link_to "詳細へ", ski_path(t.id) %>  
-     <%= t.user.email %>
-    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+    <%= link_to ski_path(t.id) do %>
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+    <% end %>
+      <br>
+      <%= link_to "詳細へ", ski_path(t.id) %>  
+      <br>
+      <%= t.user.email %>
+      <br>
       <%= t.comment %>
+      <!--- 総合評価の星の部分 ---------->
+      <br>
       <h2>総合評価：
-   <span class="star-rating">
-     <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
-     <span class="star-rating-back">★★★★★</span>
-   </span> 
-</h2>
+      <span class="star-rating">
+        <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+        <span class="star-rating-back">★★★★★</span>
+      </span>
+      </h2>
+      <!--- 総合評価の星の部分 ---------->
     </div>
   <% end %>
 </div>
+</body>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hokkaidolove</title>
+    <title>Hokkaido ski resort</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,20 +12,25 @@
 
   <body>
   <header>
-  <h1>Hokkaidolove</h1>
-  <div class="header-list">
-  <ul>
-  <% if user_signed_in? %>
-  <%= link_to "新規投稿", new_ski_path %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-  <% else %>
-  <%= link_to "ログイン", new_user_session_path %>
-  <%= link_to "新規登録", new_user_registration_path %>
-  <%= link_to "新規投稿", new_ski_path %>
-  <% end %>
-  </ul>
-  </div>
-</header>
-    <%= yield %>
+  <div class="header">
+    <div class="hokkaidolove">
+      <h1>Hokkaido ski resort</h1>
+    </div>
+    <div class="header-list">
+      <ul1>
+      <li><%= link_to "Topへ", skis_top_path %></li>
+      <li><%= link_to "スキー場一覧へ", skis_path %></li>
+      <% if user_signed_in? %>
+      <li><%= link_to "新規投稿", new_ski_path %></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to "ログイン", new_user_session_path %></li>
+      <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <% end %>
+      </ul>
+    </div>
+ </div>   
+ </header>
+      <%= yield %>
   </body>
 </html>

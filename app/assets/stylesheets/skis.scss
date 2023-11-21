@@ -2,23 +2,363 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .first-container{
-  background-image: url("top1");  
-  height:70vh;  
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 5%;
+  background-image: url("top11");  
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 .about{
   display:flex;
+  width: 100%;
+  background-color: rgba(57, 61, 70, 0.297);
+  margin-bottom:100px ;
+  
 }
 .pic{
-  height:400px;
+  height:300px;
   width:300px;
-  margin-left: 220px;
+ 
 }
 .explain{
-  margin-left: 150px;
+  margin-left: 30px;
+  width: 100%;
+  font-family: YakuHanMPs_Noto, 'Noto Serif', 'Noto Serif JP', serif;
+  
+}
+
+.box{
+  background-color:black;
+  width: 100%;
+  height: 3px;
+}
+
+
+
+.box1{
+ border: solid;
+}
+
+h2{
+  font-size: 25px;
+  text-align: center;
+}
+
+.ebi{
+  background-color: rgba(19, 117, 174, 0.301);
+  height: 700px;
+  font-family: YakuHanMPs_Noto, 'Noto Serif', 'Noto Serif JP', serif;
+}
+
+hr{
+  height: 2px;
+}
+
+
+
+.osusume{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+}
+
+.ebi2{
+  background-color: #ffcc00;
+  height: 450px;
+  width: 450px;
+}
+
+
+.aaaaaa{
+  background-color: white;
+  height: 500px;
+  width: 500px;
+  text-align: center;
+}
+.ski4{
+  width: 400px;
+  height: 400px;
+}
+
+.ski4::before{
+  content: "No1";
+}
+.ski4::after{
+  content: "札幌国際スキー場";
+  text-align: center;
+}
+
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin-right: 40px;
+}
+
+
+
+.ski5{
+  width: 400px;
+  height: 400px;
+}
+
+.ski5::before{
+  content: "No2";
+}
+.ski5::after{
+  content: "サッポロテイネスキー場";
+}
+
+
+.ski6{
+  width: 400px;
+  height: 400px;
+}
+
+.ski6::before{
+  content: "No3";
+}
+
+.ski6::after{
+  content: "さっぽろばんけいスキー場";
+  text-align: center;
+ 
+}
+
+
+.ski7{
+margin-top: 100px;
+}
+
+.hokkaidomap{
+  text-align: center;
+}
+
+
+以下、星評価
+.tweet_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 300px;
+  margin: 30px;
+}
+.name_field{
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+/*　以下新規投稿ページの星用のCSS　*/
+
+.post_form{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.post_form input[type='radio']{
+  display: none;
+}
+.post_form label{
+  position: relative;
+  padding: 10px 10px 0;
+  color: gray;
+  cursor: pointer;
+  font-size: 30px; /*星の大きさを変更するときはここ*/
+}
+.post_form label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px; /*星の上の説明書きの大きさを変更するときはここ*/
+  color: gray;
+}
+.post_form label:hover,
+.post_form label:hover ~ label,
+.post_form input[type='radio']:checked ~ label{
+  color: #ffcc00;
+}
+
+
+/*　以下一覧ページの星用のCSS　*/
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+}
+.star-rating-front {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #ffcc33;
+}
+.star-rating-back {
+  display: inline-block;
+  color: #ccc;
+  
+}
+
+
+h1{
+  font-size: 10px;
+}
+
+.header h1{
+  font-size: 40px;
+  color: white;
+}
+
+
+ul3{
+  display: flex;
+  margin-top: 50px;
+  list-style: none;
+}
+
+.ccc{
+  margin-top: 150px;
+  font-size: 20px;
+  margin-left: 50px;
+  font-weight: bold;
+  font-family: YakuHanMPs_Noto, 'Noto Serif', 'Noto Serif JP', serif;
+  
+}
+
+
+.bbb{
+  background-color: rgba(57, 61, 70, 0.297);
+  height:500px;
+}
+
+.hokkaidomap{
+  margin-left: 50px;
+}
+
+.skis-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  gap: 30px;
+  
+}
+
+.ski{
+  width: 25%;
+  border: 2px dashed rgb(248, 249, 249);
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5%;
+  background-color:  #ede7e767 ;
+  box-shadow: 0 0 0 4px rgb(243, 247, 248);
+}
+
+.skis-container{
+  padding:10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+
+body.aiueo{
+  background-image: url(sinnki-toukou.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.shiro{
+  color:black;
+  text-align: center;
+}
+
+.eee li{
+color: black;
+font-family: YakuHanMPs_Noto, 'Noto Serif', 'Noto Serif JP', serif;
+
+}
+
+body.sinnki{
+  background-image: url(sinnki-toukou.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.newtoukouhako{
+  background-color: rgba(199, 205, 211, 0.726);
+  padding: 0.5em 1.5em;
+  margin: 2em 0;
+  font-weight: bold;
+  width: 320px;
+  height: 350px;
+}
+
+.signhako{
+  background-color: rgba(199, 205, 211, 0.591);
+  padding: 0.5em 1.5em;
+  margin: 2em 0;
+  font-weight: bold;
+  width: 320px;
+  height: 350px;
+}
+
+body.signup{
+  background-image: url(sinnki-toukou.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; 
+  font-family: YakuHanMPs_Noto, 'Noto Serif', 'Noto Serif JP', serif;
+  
+}
+
+body.login{
+  background-image: url(sinnki-toukou.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; 
+  font-family: YakuHanMPs_Noto, 'Noto Serif', 'Noto Serif JP', serif;
+}
+
+.loginhako{
+  background-color: rgba(199, 205, 211, 0.591);
+  padding: 0.5em 1.5em;
+  margin: 2em 0;
+  font-weight: bold;
+  width: 320px;
+  height: 350px;
+}
+
+body.ichirann{
+  background-image: url(sinnki-toukou.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; 
+}
+
+body.forgot{
+  background-color: rgba(199, 205, 211, 0.591);
+  padding: 0.5em 1.5em;
+  margin: 2em 0;
+  font-weight: bold;
+  width: 320px;
+  height: 350px;
+}
+
+.header-list a{
+  color: white;
 }

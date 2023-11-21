@@ -1,13 +1,25 @@
-<h1>口コミ</h1>
-<h3>投稿する！！</h3>
+<body class="sinnki">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>スキー場を投稿する</h1>
+
 <%= form_for @ski do |f| %>
+
+　<div class='newtoukouhako'>
     <h5>ジャンル選択:</h5>
     <div class='form-group'>
       <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "ジャンルを選択してください"  %>
     </div>
   
-
-        <div class="field">
+    　　<div class="field">
             <%= f.label :スキー場名  %>
             <%= f.text_area :comment, :size => "30x2" %>
         </div>
@@ -40,6 +52,8 @@
         <!--ここまで星評価--!>
     <%= f.submit "投稿する" %>
 <% end %>
+  </div>
 
+</body>
 
 

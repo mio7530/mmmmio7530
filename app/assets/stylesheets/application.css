@@ -13,13 +13,41 @@
  *= require_tree .
  *= require_self
  */
- header {
-    display: flex;
+ .header {
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+   width: 100%;
+   padding: 30px 7vw;
+   box-sizing: border-box;
+   background-color: rgba(74, 83, 84, 0.66);
+ }
 
- }
+ 
+
  .header-list{
-    text-align:left;
-    margin-left: 900px;
-    padding-top: 20px;
+  margin-left: 30px;
+  font-family: YakuHanMPs_Noto, 'Noto Serif', 'Noto Serif JP', serif;
  }
-    
+
+ a{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color:black;
+  
+ }
+
+ h1{
+  font-size: 50px;
+  font-family: YakuHanMPs_Noto, 'Noto Serif', 'Noto Serif JP', serif;
+ }
+
+
+ ul1{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin-top: 50px;
+ }
+ 

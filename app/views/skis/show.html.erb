@@ -1,11 +1,29 @@
-
-<div class="ski">
-  <p><%= @ski.image %></p>
-  <p><%= @ski.created_at %></p>
-</div>
-
+<body class='ichirann'>
+ 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <div class="ski">
+  <p><%= @ski.date %></p>
+  <p><%= image_tag(@ski.image_url ,size: "300x200") if @ski.image.present? %><p>
+  <p><%= @ski.comment %></p>
+  <p><%= @ski.overall %></p>
+ </div>
 <div class="comment-wrapper">
-  <p>コメント一覧</p>
+
+
+  <h3>コメント一覧</h3>
   <% @comments.each do |c| %>
     <div>
       <%= c.user.email unless c.user.blank? %>
@@ -30,3 +48,4 @@
 <% @ski.tags.each do |tag| %>
     <span><%= tag.name %></span>
 <% end %>
+</body>
