@@ -1,6 +1,6 @@
 databases:
   - name: hokkaidolove_DB
-    databaseName: hokkaidolove_db
+    databaseName: hokkaidolove_db_ep0v
     user: hokkaidolove
     region: singapore
 
